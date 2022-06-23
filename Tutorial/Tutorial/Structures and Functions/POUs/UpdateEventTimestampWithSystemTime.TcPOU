@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="UpdateEventTimestampWithSystemTime" Id="{e9b5c6ac-66b4-4e07-ac91-0c1e8bd10fe3}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION UpdateEventTimestampWithSystemTime
+VAR_INPUT
+	stEvent : REFERENCE TO ST_Event;
+END_VAR
+VAR
+	fbGETSYSTEMTIME : GETSYSTEMTIME;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fbGETSYSTEMTIME()]]></ST>
+    </Implementation>
+    <LineIds Name="UpdateEventTimestampWithSystemTime">
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

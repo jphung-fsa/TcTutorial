@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="MAIN" Id="{dff884c8-a5df-44c5-b67a-7ce68b89575f}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	fFahrenheit : REAL;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[fFahrenheit := Celsius_To_Fahrenheit(fCelsius := 5.0);
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="13" Count="0" />
+      <LineId Id="28" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

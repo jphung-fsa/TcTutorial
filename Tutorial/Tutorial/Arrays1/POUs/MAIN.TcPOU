@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="MAIN" Id="{c97b8ca2-ef16-4241-894c-346f57c19328}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	aOneArray : ARRAY[1..5] OF INT := [4, 20, 30, 40, 50];
+	nOneInt : INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[aOneArray[1] := 42;
+nOneInt := aOneArray[1] + aOneArray[4];]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="9" Count="0" />
+      <LineId Id="8" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

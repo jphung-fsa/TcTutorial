@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="MAIN_Greater_Smaller" Id="{4503a4c5-e139-400c-9bf1-1c349b9c13ea}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN_Greater_Smaller
+VAR
+	nReturnGreater : INT;
+	nReturnSmaller : INT;
+	
+	nA : INT := 5;
+	nB : int := 15;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*Note how to assign output values from function to variables using '=>'*)
+Greater_Smaller(nNumber1 := 8, nNumber2 := 15, nGreater => nReturnGreater, nSmaller => nReturnSmaller);
+
+SwapNums(nNumber1 := nA, nNumber2 := nB);]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN_Greater_Smaller">
+      <LineId Id="9" Count="0" />
+      <LineId Id="5" Count="0" />
+      <LineId Id="15" Count="0" />
+      <LineId Id="14" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

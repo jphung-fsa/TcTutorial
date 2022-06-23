@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="UpdateEventTimestampWithSystemTime" Id="{c72cb9da-759d-4038-87a1-8308f77b08cf}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION UpdateEventTimestampWithSystemTime
+VAR_INPUT
+	stEvent : ST_Event;
+END_VAR
+VAR_OUTPUT
+	stEventOut : ST_Event;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*Pass by value*)
+stEventOut := stEvent;
+stEventOut.dtTimestamp := // ...(GetSystemTime...)]]></ST>
+    </Implementation>
+    <LineIds Name="UpdateEventTimestampWithSystemTime">
+      <LineId Id="7" Count="0" />
+      <LineId Id="10" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

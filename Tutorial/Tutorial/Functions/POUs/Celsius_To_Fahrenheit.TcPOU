@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="Celsius_To_Fahrenheit" Id="{90345588-d78c-4f6d-a4a3-670fbd7f85e5}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION Celsius_To_Fahrenheit : REAL
+VAR_INPUT
+	fCelsius : REAL;
+END_VAR
+VAR
+// scratch pad where program variables are stored.
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Celsius_To_Fahrenheit := fCelsius * 1.8 + 32.0;]]></ST>
+    </Implementation>
+    <LineIds Name="Celsius_To_Fahrenheit">
+      <LineId Id="7" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
